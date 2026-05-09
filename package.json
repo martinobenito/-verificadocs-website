@@ -1,0 +1,14 @@
+{
+  "name": "verificadocs-website",
+  "version": "1.0.0",
+  "description": "Sitio web institucional de VerificaDocs - Auditoría editorial para medios digitales argentinos",
+  "private": true,
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./public/css/styles.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./public/css/styles.css --minify",
+    "serve": "npx http-server public -p 8080 -c-1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
