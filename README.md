@@ -1,11 +1,11 @@
 # VerificaDocs — Sitio Web
 
-Sitio institucional de **VerificaDocs**, servicio B2B de auditoría editorial, corrección profesional y certificación de calidad para medios digitales argentinos.
+Sitio institucional de **VerificaDocs**, servicio de auditoría editorial especializado en medios digitales. Combina análisis humano con tecnología de IA. Fundado en 2025 por Martín Benítez Cima en Rosario, Argentina.
 
 ## Stack
 
 - HTML5 semántico
-- Tailwind CSS 3 (compilado con Tailwind CLI)
+- Tailwind CSS 3 (compilado con Tailwind CLI; CDN como fallback de preview)
 - JavaScript vanilla
 - Deploy: Netlify
 - Formularios: Formspree
@@ -16,18 +16,25 @@ Sitio institucional de **VerificaDocs**, servicio B2B de auditoría editorial, c
 verificadocs-website/
 ├── public/                # Carpeta pública servida por Netlify
 │   ├── index.html         # Inicio
-│   ├── servicios.html     # Servicios y precios
-│   ├── radar.html         # Radar Editorial (archivo)
-│   ├── sobre.html         # Sobre VerificaDocs
+│   ├── servicios.html     # 5 servicios + tabla comparativa
+│   ├── radar.html         # Radar Editorial
+│   ├── sobre.html         # Sobre VerificaDocs / Martín Benítez Cima
 │   ├── contacto.html      # Formulario y datos de contacto
-│   ├── css/styles.css     # CSS compilado (generado)
-│   ├── js/main.js         # Navegación móvil + utilidades
-│   └── assets/            # Imágenes, PDFs del Radar
+│   ├── css/styles.css     # CSS compilado (generado en build)
+│   ├── js/main.js         # Navegación móvil y formulario
+│   └── assets/radar/      # PDFs del Radar Editorial
 ├── src/input.css          # Entrada de Tailwind
 ├── tailwind.config.js
 ├── netlify.toml
 └── package.json
 ```
+
+## Datos de contacto
+
+- Email: martin.verificadocs@gmail.com
+- Teléfono: (+54) 341-3969973
+- LinkedIn: https://linkedin.com/in/benitez-martin/
+- Ubicación: Rosario, Argentina
 
 ## Desarrollo local
 
@@ -36,8 +43,6 @@ npm install
 npm run dev          # compila Tailwind en modo watch
 npm run serve        # sirve /public en http://localhost:8080
 ```
-
-Abrir las dos terminales en paralelo: `npm run dev` y `npm run serve`.
 
 ## Build de producción
 
@@ -49,12 +54,11 @@ Genera `public/css/styles.css` minificado.
 
 ## Deploy en Netlify
 
-1. Subir el repo `verificadocs-website` a GitHub.
-2. En Netlify: **Add new site → Import from Git → seleccionar repo**.
-3. Netlify detectará automáticamente `netlify.toml`:
+1. Conectar el repo `verificadocs-website` a Netlify.
+2. Netlify detecta `netlify.toml` automáticamente:
    - Build command: `npm run build`
    - Publish directory: `public`
-4. Click **Deploy**.
+3. Click **Deploy**.
 
 ## Configurar Formspree
 
@@ -64,10 +68,9 @@ Genera `public/css/styles.css` minificado.
    <form action="https://formspree.io/f/TU_ID_FORMSPREE" method="POST">
    ```
 
-## Personalización
+## PDFs del Radar Editorial
 
-- **Colores**: editar `tailwind.config.js` → `theme.extend.colors`.
-- **Tipografía**: cambiar `<link>` de Google Fonts en cada página y `fontFamily` en config.
-- **Datos del fundador**: actualizar `sobre.html`.
-- **Servicios y precios**: actualizar `servicios.html`.
-- **Ediciones del Radar**: agregar entradas en `radar.html` y los PDFs en `public/assets/radar/`.
+Subir los PDFs del Radar a `public/assets/radar/` con estos nombres:
+
+- `radar-local-mayo-2026.pdf`
+- `radar-nacional-mayo-2026.pdf`

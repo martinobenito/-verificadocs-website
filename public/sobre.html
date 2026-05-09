@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre VerificaDocs — Martín Benítez Cima</title>
+  <meta name="description" content="Sobre VerificaDocs: fundado por Martín Benítez Cima, periodista especializado en calidad editorial. Formación académica en la Universidad Nacional de Rosario y experiencia docente y profesional en medios." />
+  <meta name="theme-color" content="#1e3a8a" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231e3a8a'/%3E%3Cpath d='M18 32l10 10 18-20' stroke='%2310b981' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:"#eef4ff",100:"#dbe6fe",200:"#bfd2fe",300:"#93b4fd",400:"#608bf9",500:"#3b66f4",600:"#2547e8",700:"#1e3ad1",800:"#1e3a8a",900:"#1e2f6b",950:"#101a3f" },
+            accent: { 500:"#10b981",600:"#059669",700:"#047857" },
+            gold: { 500:"#f59e0b",600:"#d97706" }
+          },
+          fontFamily: {
+            sans: ["Inter","system-ui","-apple-system","Segoe UI","Roboto","sans-serif"],
+            display: ["'Plus Jakarta Sans'","Inter","system-ui","sans-serif"]
+          },
+          boxShadow: { soft:"0 10px 30px -12px rgba(30,58,138,0.18)", card:"0 4px 20px -8px rgba(15,23,42,0.12)" },
+          maxWidth: { prose:"70ch" }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      html { scroll-behavior:smooth; }
+      body { @apply font-sans text-slate-700 antialiased bg-white; }
+      h1,h2,h3,h4 { @apply font-display text-slate-900; }
+    }
+    @layer components {
+      .container-page { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10; }
+      .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-offset-2; }
+      .btn-primary { @apply btn bg-brand-700 text-white hover:bg-brand-800 focus:ring-brand-500 shadow-soft; }
+      .btn-secondary { @apply btn bg-white text-brand-800 border border-brand-200 hover:bg-brand-50 focus:ring-brand-500; }
+      .btn-accent { @apply btn bg-accent-600 text-white hover:bg-accent-700 focus:ring-accent-500 shadow-soft; }
+      .badge { @apply inline-flex items-center gap-2 rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-800; }
+      .card { @apply bg-white rounded-2xl border border-slate-100 shadow-card p-6 sm:p-8; }
+      .nav-link { @apply text-sm font-medium text-slate-600 hover:text-brand-800 transition; }
+      .nav-link-active { @apply text-brand-800 font-semibold; }
+      .section { @apply py-16 sm:py-24; }
+      .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.2em] text-accent-600; }
+    }
+  </style>
+</head>
+<body>
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+    <div class="container-page flex items-center justify-between py-4">
+      <a href="index.html" class="flex items-center gap-2 font-display font-extrabold text-brand-800 text-xl">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand-800 text-white">
+          <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7" stroke="#10b981"/></svg>
+        </span>
+        VerificaDocs
+      </a>
+      <nav data-nav-desktop class="hidden md:flex items-center gap-8">
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="servicios.html">Servicios</a>
+        <a class="nav-link" href="radar.html">Radar Editorial</a>
+        <a class="nav-link" href="sobre.html">Sobre VerificaDocs</a>
+        <a class="nav-link" href="contacto.html">Contacto</a>
+      </nav>
+      <a href="contacto.html" class="hidden md:inline-flex btn-primary">Solicitar auditoría piloto gratuita</a>
+      <button data-nav-toggle aria-expanded="false" aria-label="Abrir menú" class="md:hidden p-2 text-slate-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div data-nav-menu class="hidden md:hidden border-t border-slate-100 bg-white">
+      <div class="container-page flex flex-col gap-3 py-4">
+        <a class="nav-link py-1" href="index.html">Inicio</a>
+        <a class="nav-link py-1" href="servicios.html">Servicios</a>
+        <a class="nav-link py-1" href="radar.html">Radar Editorial</a>
+        <a class="nav-link py-1" href="sobre.html">Sobre VerificaDocs</a>
+        <a class="nav-link py-1" href="contacto.html">Contacto</a>
+        <a class="btn-primary mt-2" href="contacto.html">Solicitar auditoría piloto gratuita</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero biografía -->
+    <section class="bg-gradient-to-b from-brand-50 to-white">
+      <div class="container-page py-16 sm:py-20 grid lg:grid-cols-5 gap-12 items-center">
+        <div class="lg:col-span-3">
+          <p class="eyebrow">Sobre VerificaDocs</p>
+          <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight">Sobre VerificaDocs</h1>
+          <p class="mt-5 text-lg text-slate-600 max-w-2xl">VerificaDocs es un proyecto independiente fundado por Martín Benítez Cima, periodista especializado en calidad editorial, con base en Rosario y servicio disponible para todo el mundo hispanohablante.</p>
+        </div>
+        <div class="lg:col-span-2">
+          <div class="relative">
+            <div class="absolute -inset-3 bg-gradient-to-tr from-accent-500 to-brand-700 rounded-3xl blur-xl opacity-30" aria-hidden="true"></div>
+            <div class="relative aspect-[4/5] rounded-3xl bg-slate-200 flex items-center justify-center text-slate-500 text-sm font-medium shadow-soft">
+              Foto del fundador
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fundador -->
+    <section class="section">
+      <div class="container-page">
+        <p class="eyebrow">Fundador</p>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-bold">Martín Benítez Cima</h2>
+        <p class="mt-2 text-lg text-slate-600">Fundador de VerificaDocs · Periodista especializado en calidad editorial</p>
+
+        <div class="mt-12 grid lg:grid-cols-2 gap-10">
+          <!-- Credenciales académicas -->
+          <div>
+            <h3 class="text-xl font-bold flex items-center gap-3">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand-100 text-brand-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+              </span>
+              Credenciales académicas
+            </h3>
+            <ul class="mt-6 space-y-4">
+              <li class="card">
+                <p class="text-xs uppercase tracking-wider text-slate-500">En curso</p>
+                <p class="mt-1 font-bold">Licenciatura en Periodismo</p>
+                <p class="text-sm text-slate-600">Universidad Nacional de Rosario</p>
+              </li>
+              <li class="card">
+                <p class="text-xs uppercase tracking-wider text-slate-500">2020</p>
+                <p class="mt-1 font-bold">Postgrado en Periodismo y Comunicación Digital</p>
+                <p class="text-sm text-slate-600">Universidad Nacional de Rosario</p>
+              </li>
+              <li class="card">
+                <p class="text-xs uppercase tracking-wider text-slate-500">2017</p>
+                <p class="mt-1 font-bold">Tecnicatura Superior en Periodismo Deportivo</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Experiencia profesional -->
+          <div>
+            <h3 class="text-xl font-bold flex items-center gap-3">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand-100 text-brand-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </span>
+              Experiencia profesional
+            </h3>
+            <ul class="mt-6 space-y-4">
+              <li class="card">
+                <p class="text-xs uppercase tracking-wider text-slate-500">2021 — presente</p>
+                <p class="mt-1 font-bold">Columnista deportivo y productor online</p>
+                <p class="text-sm text-slate-600">Grupo Rebolloso Media</p>
+              </li>
+              <li class="card">
+                <p class="text-xs uppercase tracking-wider text-slate-500">2018 — 2020</p>
+                <p class="mt-1 font-bold">Docente universitario adscripto · "Lenguaje de los medios"</p>
+                <p class="text-sm text-slate-600">ISEF Nº 11</p>
+              </li>
+              <li class="card">
+                <p class="text-xs uppercase tracking-wider text-slate-500">2018 — 2020</p>
+                <p class="mt-1 font-bold">Operador de estudios centrales en radio</p>
+                <p class="text-sm text-slate-600">Radio Horizonte FM 91.7</p>
+              </li>
+              <li class="card">
+                <p class="text-xs uppercase tracking-wider text-slate-500">2016</p>
+                <p class="mt-1 font-bold">Redactor de notas deportivas</p>
+                <p class="text-sm text-slate-600">Secretaría de Deportes, Municipalidad de Rosario</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por qué creé VerificaDocs -->
+    <section class="section bg-slate-50">
+      <div class="container-page grid lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-1">
+          <p class="eyebrow">Origen</p>
+          <h2 class="mt-3 text-3xl font-bold">Por qué creé VerificaDocs</h2>
+        </div>
+        <div class="lg:col-span-2">
+          <p class="text-lg text-slate-700 max-w-prose">"Durante mi trabajo como columnista y docente, identifiqué un problema recurrente en medios digitales argentinos: errores ortográficos y gramaticales que afectan la credibilidad profesional. VerificaDocs nace como respuesta a ese problema: un servicio de auditoría editorial especializado que combina rigor académico con tecnología de IA."</p>
+          <p class="mt-4 text-sm font-semibold text-slate-500">— Martín Benítez Cima</p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="https://linkedin.com/in/benitez-martin/" target="_blank" rel="noopener" class="btn-secondary">
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              Ver perfil en LinkedIn
+            </a>
+            <a href="contacto.html" class="btn-primary">Contactar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="section">
+      <div class="container-page">
+        <div class="card bg-gradient-to-br from-brand-800 to-brand-950 text-white border-transparent text-center py-14">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white max-w-3xl mx-auto">¿Querés conversar sobre tu medio?</h2>
+          <p class="mt-4 text-brand-100 max-w-2xl mx-auto">Las primeras conversaciones siempre son con Martín. Sin filtros comerciales, sin guiones de venta.</p>
+          <div class="mt-8 flex justify-center">
+            <a href="contacto.html" class="btn-accent">Contactar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="container-page py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="lg:col-span-2">
+        <p class="font-display font-extrabold text-white text-lg">VerificaDocs</p>
+        <p class="mt-3 text-sm text-slate-400 max-w-sm">Auditoría especializada en calidad editorial.</p>
+        <p class="mt-2 text-sm text-slate-400">Rosario, Argentina · Servicio disponible para todo el mundo hispanohablante.</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-wider text-slate-500">Sitio</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-white">Inicio</a></li>
+          <li><a href="servicios.html" class="hover:text-white">Servicios</a></li>
+          <li><a href="radar.html" class="hover:text-white">Radar Editorial</a></li>
+          <li><a href="sobre.html" class="hover:text-white">Sobre VerificaDocs</a></li>
+          <li><a href="contacto.html" class="hover:text-white">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-wider text-slate-500">Contacto</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="mailto:martin.verificadocs@gmail.com" class="hover:text-white break-all">martin.verificadocs@gmail.com</a></li>
+          <li><a href="tel:+543413969973" class="hover:text-white">(+54) 341-3969973</a></li>
+          <li><a href="https://linkedin.com/in/benitez-martin/" target="_blank" rel="noopener" class="hover:text-white">linkedin.com/in/benitez-martin/</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800">
+      <div class="container-page py-5 text-xs text-slate-500 text-center">
+        <p>© <span data-year>2026</span> VerificaDocs. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

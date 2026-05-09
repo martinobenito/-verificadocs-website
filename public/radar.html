@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radar Editorial — VerificaDocs</title>
+  <meta name="description" content="Relevamiento periódico de calidad editorial en medios digitales argentinos. Cada 15 días publicamos un análisis de errores con metodología transparente y anonimato pleno." />
+  <meta name="theme-color" content="#1e3a8a" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231e3a8a'/%3E%3Cpath d='M18 32l10 10 18-20' stroke='%2310b981' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:"#eef4ff",100:"#dbe6fe",200:"#bfd2fe",300:"#93b4fd",400:"#608bf9",500:"#3b66f4",600:"#2547e8",700:"#1e3ad1",800:"#1e3a8a",900:"#1e2f6b",950:"#101a3f" },
+            accent: { 500:"#10b981",600:"#059669",700:"#047857" },
+            gold: { 500:"#f59e0b",600:"#d97706" }
+          },
+          fontFamily: {
+            sans: ["Inter","system-ui","-apple-system","Segoe UI","Roboto","sans-serif"],
+            display: ["'Plus Jakarta Sans'","Inter","system-ui","sans-serif"]
+          },
+          boxShadow: { soft:"0 10px 30px -12px rgba(30,58,138,0.18)", card:"0 4px 20px -8px rgba(15,23,42,0.12)" },
+          maxWidth: { prose:"70ch" }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      html { scroll-behavior:smooth; }
+      body { @apply font-sans text-slate-700 antialiased bg-white; }
+      h1,h2,h3,h4 { @apply font-display text-slate-900; }
+    }
+    @layer components {
+      .container-page { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10; }
+      .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-offset-2; }
+      .btn-primary { @apply btn bg-brand-700 text-white hover:bg-brand-800 focus:ring-brand-500 shadow-soft; }
+      .btn-secondary { @apply btn bg-white text-brand-800 border border-brand-200 hover:bg-brand-50 focus:ring-brand-500; }
+      .btn-accent { @apply btn bg-accent-600 text-white hover:bg-accent-700 focus:ring-accent-500 shadow-soft; }
+      .badge { @apply inline-flex items-center gap-2 rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-800; }
+      .card { @apply bg-white rounded-2xl border border-slate-100 shadow-card p-6 sm:p-8; }
+      .nav-link { @apply text-sm font-medium text-slate-600 hover:text-brand-800 transition; }
+      .nav-link-active { @apply text-brand-800 font-semibold; }
+      .section { @apply py-16 sm:py-24; }
+      .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.2em] text-accent-600; }
+    }
+  </style>
+</head>
+<body>
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+    <div class="container-page flex items-center justify-between py-4">
+      <a href="index.html" class="flex items-center gap-2 font-display font-extrabold text-brand-800 text-xl">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand-800 text-white">
+          <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7" stroke="#10b981"/></svg>
+        </span>
+        VerificaDocs
+      </a>
+      <nav data-nav-desktop class="hidden md:flex items-center gap-8">
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="servicios.html">Servicios</a>
+        <a class="nav-link" href="radar.html">Radar Editorial</a>
+        <a class="nav-link" href="sobre.html">Sobre VerificaDocs</a>
+        <a class="nav-link" href="contacto.html">Contacto</a>
+      </nav>
+      <a href="contacto.html" class="hidden md:inline-flex btn-primary">Solicitar auditoría piloto gratuita</a>
+      <button data-nav-toggle aria-expanded="false" aria-label="Abrir menú" class="md:hidden p-2 text-slate-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div data-nav-menu class="hidden md:hidden border-t border-slate-100 bg-white">
+      <div class="container-page flex flex-col gap-3 py-4">
+        <a class="nav-link py-1" href="index.html">Inicio</a>
+        <a class="nav-link py-1" href="servicios.html">Servicios</a>
+        <a class="nav-link py-1" href="radar.html">Radar Editorial</a>
+        <a class="nav-link py-1" href="sobre.html">Sobre VerificaDocs</a>
+        <a class="nav-link py-1" href="contacto.html">Contacto</a>
+        <a class="btn-primary mt-2" href="contacto.html">Solicitar auditoría piloto gratuita</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="bg-gradient-to-b from-brand-50 to-white">
+      <div class="container-page py-16 sm:py-20">
+        <p class="eyebrow">Radar Editorial</p>
+        <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight max-w-3xl">Radar Editorial · Relevamiento periódico de calidad editorial</h1>
+        <p class="mt-5 text-lg text-slate-600 max-w-3xl">Cada 15 días publicamos un análisis de errores ortográficos, gramaticales y semánticos en medios digitales argentinos. Metodología transparente, anonimato pleno.</p>
+      </div>
+    </section>
+
+    <!-- Metodología -->
+    <section class="section">
+      <div class="container-page">
+        <p class="eyebrow">Metodología</p>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-bold max-w-3xl">Cómo construimos cada Radar</h2>
+        <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="card">
+            <div class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 text-brand-800 font-bold">1</div>
+            <h3 class="mt-4 font-bold">Selección de medios</h3>
+            <p class="mt-2 text-sm text-slate-600">Tomamos una muestra representativa de medios digitales argentinos, alternando entre ediciones locales (Rosario y zona) y nacionales para cubrir distintos contextos editoriales.</p>
+          </div>
+          <div class="card">
+            <div class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 text-brand-800 font-bold">2</div>
+            <h3 class="mt-4 font-bold">Criterios de inclusión</h3>
+            <p class="mt-2 text-sm text-slate-600">Documentamos errores verificables: ortográficos, gramaticales y semánticos. No incluimos juicios de estilo ni decisiones editoriales legítimas que pudieran ser materia de debate.</p>
+          </div>
+          <div class="card">
+            <div class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 text-brand-800 font-bold">3</div>
+            <h3 class="mt-4 font-bold">Política de anonimato</h3>
+            <p class="mt-2 text-sm text-slate-600">No identificamos a los medios analizados. El objetivo es elevar el ecosistema editorial, no señalar redacciones individuales. Toda referencia es anonimizada en el reporte público.</p>
+          </div>
+          <div class="card">
+            <div class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 text-brand-800 font-bold">4</div>
+            <h3 class="mt-4 font-bold">Frecuencia quincenal</h3>
+            <p class="mt-2 text-sm text-slate-600">Publicamos una nueva edición cada 15 días. Esa frecuencia permite observar tendencias sin generar saturación informativa, y mantiene el material relevante para los equipos editoriales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Archivo de ediciones -->
+    <section class="section bg-slate-50">
+      <div class="container-page">
+        <p class="eyebrow">Archivo</p>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-bold">Ediciones publicadas</h2>
+        <p class="mt-3 text-slate-600 max-w-2xl">VerificaDocs es un servicio en lanzamiento. A continuación, las ediciones disponibles del Radar al día de hoy.</p>
+
+        <div class="mt-10 grid md:grid-cols-2 gap-6">
+
+          <article class="card">
+            <div class="aspect-[16/9] rounded-lg bg-gradient-to-br from-brand-700 to-brand-900 flex items-end p-6 text-white">
+              <div>
+                <p class="text-xs uppercase tracking-wider text-brand-200">Edición Local · Mayo 2026</p>
+                <h3 class="mt-2 font-bold text-xl leading-snug text-white">3 medios digitales rosarinos · 9 errores documentados</h3>
+              </div>
+            </div>
+            <p class="mt-5 text-sm text-slate-600">Análisis de tres medios digitales con base en Rosario. Documentamos nueve errores entre titulares, copetes y cuerpo de notas, agrupados por tipología.</p>
+            <div class="mt-5">
+              <a href="assets/radar/radar-local-mayo-2026.pdf" class="btn-primary" download>
+                Descargar PDF
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="aspect-[16/9] rounded-lg bg-gradient-to-br from-accent-600 to-brand-800 flex items-end p-6 text-white">
+              <div>
+                <p class="text-xs uppercase tracking-wider text-accent-100">Edición Nacional · Mayo 2026</p>
+                <h3 class="mt-2 font-bold text-xl leading-snug text-white">2 medios digitales nacionales · 6 errores documentados</h3>
+              </div>
+            </div>
+            <p class="mt-5 text-sm text-slate-600">Análisis de dos medios digitales de alcance nacional. Documentamos seis errores con foco en notas de portada y secciones de mayor visibilidad.</p>
+            <div class="mt-5">
+              <a href="assets/radar/radar-nacional-mayo-2026.pdf" class="btn-primary" download>
+                Descargar PDF
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="mt-8 text-sm text-slate-500">Próxima edición: junio 2026. Para recibir las nuevas ediciones, <a href="contacto.html" class="text-brand-700 font-semibold hover:text-brand-800">escribinos por la página de contacto</a>.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container-page">
+        <div class="card bg-gradient-to-br from-brand-800 to-brand-950 text-white border-transparent text-center py-14">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white max-w-3xl mx-auto">¿Querés que tu medio sea auditado?</h2>
+          <p class="mt-4 text-brand-100 max-w-2xl mx-auto">El Radar es público y anonimizado. Si querés un informe privado, detallado y con recomendaciones específicas para tu redacción, contactanos.</p>
+          <div class="mt-8 flex justify-center">
+            <a href="contacto.html" class="btn-accent">Contactanos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="container-page py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="lg:col-span-2">
+        <p class="font-display font-extrabold text-white text-lg">VerificaDocs</p>
+        <p class="mt-3 text-sm text-slate-400 max-w-sm">Auditoría especializada en calidad editorial.</p>
+        <p class="mt-2 text-sm text-slate-400">Rosario, Argentina · Servicio disponible para todo el mundo hispanohablante.</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-wider text-slate-500">Sitio</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-white">Inicio</a></li>
+          <li><a href="servicios.html" class="hover:text-white">Servicios</a></li>
+          <li><a href="radar.html" class="hover:text-white">Radar Editorial</a></li>
+          <li><a href="sobre.html" class="hover:text-white">Sobre VerificaDocs</a></li>
+          <li><a href="contacto.html" class="hover:text-white">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-wider text-slate-500">Contacto</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="mailto:martin.verificadocs@gmail.com" class="hover:text-white break-all">martin.verificadocs@gmail.com</a></li>
+          <li><a href="tel:+543413969973" class="hover:text-white">(+54) 341-3969973</a></li>
+          <li><a href="https://linkedin.com/in/benitez-martin/" target="_blank" rel="noopener" class="hover:text-white">linkedin.com/in/benitez-martin/</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800">
+      <div class="container-page py-5 text-xs text-slate-500 text-center">
+        <p>© <span data-year>2026</span> VerificaDocs. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios — VerificaDocs</title>
+  <meta name="description" content="Cinco servicios de auditoría editorial: Auditoría Puntual, Suscripción Mensual, Capacitación, Certificación de Calidad y Consultoría Editorial. Precios en USD." />
+  <meta name="theme-color" content="#1e3a8a" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231e3a8a'/%3E%3Cpath d='M18 32l10 10 18-20' stroke='%2310b981' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:"#eef4ff",100:"#dbe6fe",200:"#bfd2fe",300:"#93b4fd",400:"#608bf9",500:"#3b66f4",600:"#2547e8",700:"#1e3ad1",800:"#1e3a8a",900:"#1e2f6b",950:"#101a3f" },
+            accent: { 500:"#10b981",600:"#059669",700:"#047857" },
+            gold: { 500:"#f59e0b",600:"#d97706" }
+          },
+          fontFamily: {
+            sans: ["Inter","system-ui","-apple-system","Segoe UI","Roboto","sans-serif"],
+            display: ["'Plus Jakarta Sans'","Inter","system-ui","sans-serif"]
+          },
+          boxShadow: { soft:"0 10px 30px -12px rgba(30,58,138,0.18)", card:"0 4px 20px -8px rgba(15,23,42,0.12)" },
+          maxWidth: { prose:"70ch" }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      html { scroll-behavior:smooth; }
+      body { @apply font-sans text-slate-700 antialiased bg-white; }
+      h1,h2,h3,h4 { @apply font-display text-slate-900; }
+    }
+    @layer components {
+      .container-page { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10; }
+      .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-offset-2; }
+      .btn-primary { @apply btn bg-brand-700 text-white hover:bg-brand-800 focus:ring-brand-500 shadow-soft; }
+      .btn-secondary { @apply btn bg-white text-brand-800 border border-brand-200 hover:bg-brand-50 focus:ring-brand-500; }
+      .btn-accent { @apply btn bg-accent-600 text-white hover:bg-accent-700 focus:ring-accent-500 shadow-soft; }
+      .badge { @apply inline-flex items-center gap-2 rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-800; }
+      .card { @apply bg-white rounded-2xl border border-slate-100 shadow-card p-6 sm:p-8; }
+      .nav-link { @apply text-sm font-medium text-slate-600 hover:text-brand-800 transition; }
+      .nav-link-active { @apply text-brand-800 font-semibold; }
+      .section { @apply py-16 sm:py-24; }
+      .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.2em] text-accent-600; }
+    }
+  </style>
+</head>
+<body>
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+    <div class="container-page flex items-center justify-between py-4">
+      <a href="index.html" class="flex items-center gap-2 font-display font-extrabold text-brand-800 text-xl">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand-800 text-white">
+          <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7" stroke="#10b981"/></svg>
+        </span>
+        VerificaDocs
+      </a>
+      <nav data-nav-desktop class="hidden md:flex items-center gap-8">
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="servicios.html">Servicios</a>
+        <a class="nav-link" href="radar.html">Radar Editorial</a>
+        <a class="nav-link" href="sobre.html">Sobre VerificaDocs</a>
+        <a class="nav-link" href="contacto.html">Contacto</a>
+      </nav>
+      <a href="contacto.html" class="hidden md:inline-flex btn-primary">Solicitar auditoría piloto gratuita</a>
+      <button data-nav-toggle aria-expanded="false" aria-label="Abrir menú" class="md:hidden p-2 text-slate-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div data-nav-menu class="hidden md:hidden border-t border-slate-100 bg-white">
+      <div class="container-page flex flex-col gap-3 py-4">
+        <a class="nav-link py-1" href="index.html">Inicio</a>
+        <a class="nav-link py-1" href="servicios.html">Servicios</a>
+        <a class="nav-link py-1" href="radar.html">Radar Editorial</a>
+        <a class="nav-link py-1" href="sobre.html">Sobre VerificaDocs</a>
+        <a class="nav-link py-1" href="contacto.html">Contacto</a>
+        <a class="btn-primary mt-2" href="contacto.html">Solicitar auditoría piloto gratuita</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="bg-gradient-to-b from-brand-50 to-white">
+      <div class="container-page py-16 sm:py-20">
+        <p class="eyebrow">Servicios</p>
+        <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight max-w-3xl">Servicios de auditoría editorial</h1>
+        <p class="mt-5 text-lg text-slate-600 max-w-2xl">Combinamos análisis humano especializado con tecnología de IA para garantizar estándares de calidad editorial certificados.</p>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="section">
+      <div class="container-page space-y-6">
+
+        <article id="auditoria-puntual" class="card grid lg:grid-cols-12 gap-6 items-start">
+          <div class="lg:col-span-2"><span class="badge">Servicio 01</span></div>
+          <div class="lg:col-span-7">
+            <h2 class="text-2xl font-bold">Auditoría Puntual</h2>
+            <p class="mt-2 text-slate-600">Revisión completa de contenido publicado, reporte detallado y recomendaciones accionables. Ideal para diagnosticar la calidad editorial actual antes de un rediseño, una campaña o una decisión de inversión.</p>
+            <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-slate-600">
+              <li>✓ Revisión completa de contenido publicado</li>
+              <li>✓ Reporte detallado de hallazgos</li>
+              <li>✓ Recomendaciones accionables</li>
+              <li>✓ Entregable único</li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3 flex flex-col items-start lg:items-end gap-3">
+            <div><p class="text-xs text-slate-500">Desde</p><p class="text-3xl font-bold text-brand-800">USD 100 – 200</p></div>
+            <a href="contacto.html" class="btn-primary w-full lg:w-auto">Contratar</a>
+          </div>
+        </article>
+
+        <article id="suscripcion-mensual" class="card grid lg:grid-cols-12 gap-6 items-start">
+          <div class="lg:col-span-2"><span class="badge">Servicio 02</span></div>
+          <div class="lg:col-span-7">
+            <h2 class="text-2xl font-bold">Suscripción Mensual</h2>
+            <p class="mt-2 text-slate-600">Servicio continuo de revisión editorial. Auditamos entre 20 y 50 artículos por mes según el plan, con reporte mensual y dashboard de resultados para seguir la evolución de la calidad editorial.</p>
+            <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-slate-600">
+              <li>✓ Entre 20 y 50 artículos / mes</li>
+              <li>✓ Reporte mensual</li>
+              <li>✓ Dashboard de resultados</li>
+              <li>✓ Seguimiento mes a mes</li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3 flex flex-col items-start lg:items-end gap-3">
+            <div><p class="text-xs text-slate-500">Mensual</p><p class="text-3xl font-bold text-brand-800">USD 300 – 400 <span class="text-base font-medium text-slate-500">/mes</span></p></div>
+            <a href="contacto.html" class="btn-primary w-full lg:w-auto">Contratar</a>
+          </div>
+        </article>
+
+        <article id="capacitacion" class="card grid lg:grid-cols-12 gap-6 items-start">
+          <div class="lg:col-span-2"><span class="badge">Servicio 03</span></div>
+          <div class="lg:col-span-7">
+            <h2 class="text-2xl font-bold">Capacitación Editorial</h2>
+            <p class="mt-2 text-slate-600">Taller para el equipo editorial del medio, guía de estilo personalizada y coaching de seguimiento. Pensado para que la redacción incorpore criterios estables que sostengan la calidad sin depender de auditoría externa permanente.</p>
+            <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-slate-600">
+              <li>✓ Taller para el equipo editorial</li>
+              <li>✓ Guía de estilo personalizada</li>
+              <li>✓ Coaching de seguimiento</li>
+              <li>✓ Material descargable</li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3 flex flex-col items-start lg:items-end gap-3">
+            <div><p class="text-xs text-slate-500">Por proyecto</p><p class="text-3xl font-bold text-brand-800">USD 350 – 900</p></div>
+            <a href="contacto.html" class="btn-primary w-full lg:w-auto">Cotizar</a>
+          </div>
+        </article>
+
+        <article id="certificacion" class="card grid lg:grid-cols-12 gap-6 items-start">
+          <div class="lg:col-span-2"><span class="badge">Servicio 04</span></div>
+          <div class="lg:col-span-7">
+            <h2 class="text-2xl font-bold">Certificación de Calidad</h2>
+            <p class="mt-2 text-slate-600">Auditoría completa más sello "Verificado por VerificaDocs" con reportes detallados. Pensado para medios que quieren mostrar su compromiso con la calidad editorial frente a anunciantes, sponsors y lectores.</p>
+            <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-slate-600">
+              <li>✓ Auditoría completa</li>
+              <li>✓ Sello "Verificado por VerificaDocs"</li>
+              <li>✓ Reportes detallados</li>
+              <li>✓ Reauditoría incluida</li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3 flex flex-col items-start lg:items-end gap-3">
+            <div><p class="text-xs text-slate-500">Por proyecto</p><p class="text-3xl font-bold text-brand-800">USD 1.000 – 1.500</p></div>
+            <a href="contacto.html" class="btn-primary w-full lg:w-auto">Contratar</a>
+          </div>
+        </article>
+
+        <article id="consultoria" class="card grid lg:grid-cols-12 gap-6 items-start">
+          <div class="lg:col-span-2"><span class="badge">Servicio 05</span></div>
+          <div class="lg:col-span-7">
+            <h2 class="text-2xl font-bold">Consultoría Editorial</h2>
+            <p class="mt-2 text-slate-600">Diagnóstico de procesos editoriales del medio, diseño del flujo editorial óptimo, implementación con el equipo y seguimiento posterior. El servicio más profundo, para medios que quieren transformar su forma de producir contenido.</p>
+            <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-slate-600">
+              <li>✓ Diagnóstico de procesos</li>
+              <li>✓ Diseño de flujo editorial</li>
+              <li>✓ Implementación con el equipo</li>
+              <li>✓ Seguimiento posterior</li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3 flex flex-col items-start lg:items-end gap-3">
+            <div><p class="text-xs text-slate-500">Por proyecto</p><p class="text-3xl font-bold text-brand-800">USD 1.800 – 2.000</p></div>
+            <a href="contacto.html" class="btn-primary w-full lg:w-auto">Cotizar</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Tabla comparativa -->
+    <section class="section bg-slate-50">
+      <div class="container-page">
+        <div class="max-w-3xl">
+          <p class="eyebrow">Comparativa</p>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-bold">VerificaDocs vs herramientas genéricas</h2>
+          <p class="mt-4 text-slate-600">Por qué un servicio especializado en periodismo no es comparable con un corrector automático genérico.</p>
+        </div>
+        <div class="mt-10 overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-card">
+          <table class="w-full text-sm">
+            <thead class="bg-brand-800 text-white">
+              <tr>
+                <th class="text-left p-4 font-semibold">Criterio</th>
+                <th class="text-center p-4 font-semibold">Herramientas genéricas<br/><span class="text-xs font-normal text-brand-200">(Grammarly / ChatGPT)</span></th>
+                <th class="text-center p-4 font-semibold">VerificaDocs</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr><td class="p-4 font-medium">Especialización</td><td class="text-center p-4">Genérica</td><td class="text-center p-4 text-accent-700 font-semibold">Periodismo / Medios</td></tr>
+              <tr><td class="p-4 font-medium">Análisis</td><td class="text-center p-4">Automático</td><td class="text-center p-4 text-accent-700 font-semibold">Humano + IA</td></tr>
+              <tr><td class="p-4 font-medium">Ética periodística</td><td class="text-center p-4 text-red-500">No</td><td class="text-center p-4 text-accent-700 font-semibold">Sí</td></tr>
+              <tr><td class="p-4 font-medium">Auditoría externa</td><td class="text-center p-4 text-red-500">No</td><td class="text-center p-4 text-accent-700 font-semibold">Sí</td></tr>
+              <tr><td class="p-4 font-medium">Certificación</td><td class="text-center p-4 text-red-500">No</td><td class="text-center p-4 text-accent-700 font-semibold">Sí</td></tr>
+              <tr><td class="p-4 font-medium">Formación académica</td><td class="text-center p-4 text-red-500">No</td><td class="text-center p-4 text-accent-700 font-semibold">Sí</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="section">
+      <div class="container-page">
+        <div class="card bg-gradient-to-br from-brand-800 to-brand-950 text-white border-transparent text-center py-14">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white max-w-3xl mx-auto">¿No estás seguro qué servicio necesitás? Hablemos.</h2>
+          <p class="mt-4 text-brand-100 max-w-2xl mx-auto">Te orientamos sin compromiso. Si lo que necesitás es algo distinto a estos cinco servicios, lo armamos a medida.</p>
+          <div class="mt-8 flex justify-center">
+            <a href="contacto.html" class="btn-accent">Contactanos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="container-page py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="lg:col-span-2">
+        <p class="font-display font-extrabold text-white text-lg">VerificaDocs</p>
+        <p class="mt-3 text-sm text-slate-400 max-w-sm">Auditoría especializada en calidad editorial.</p>
+        <p class="mt-2 text-sm text-slate-400">Rosario, Argentina · Servicio disponible para todo el mundo hispanohablante.</p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-wider text-slate-500">Sitio</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-white">Inicio</a></li>
+          <li><a href="servicios.html" class="hover:text-white">Servicios</a></li>
+          <li><a href="radar.html" class="hover:text-white">Radar Editorial</a></li>
+          <li><a href="sobre.html" class="hover:text-white">Sobre VerificaDocs</a></li>
+          <li><a href="contacto.html" class="hover:text-white">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-wider text-slate-500">Contacto</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="mailto:martin.verificadocs@gmail.com" class="hover:text-white break-all">martin.verificadocs@gmail.com</a></li>
+          <li><a href="tel:+543413969973" class="hover:text-white">(+54) 341-3969973</a></li>
+          <li><a href="https://linkedin.com/in/benitez-martin/" target="_blank" rel="noopener" class="hover:text-white">linkedin.com/in/benitez-martin/</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800">
+      <div class="container-page py-5 text-xs text-slate-500 text-center">
+        <p>© <span data-year>2026</span> VerificaDocs. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
