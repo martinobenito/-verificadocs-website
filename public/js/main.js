@@ -84,7 +84,7 @@ function initFormFeedback() {
       }
     } catch (err) {
       if (status) {
-        status.textContent = "Hubo un problema al enviar el formulario. Por favor escribinos a hola@verificadocs.com.ar.";
+        status.textContent = "Hubo un problema al enviar el formulario. Por favor escribinos a martin.verificadocs@gmail.com";
         status.className = "text-sm font-medium text-red-600 mt-4";
       }
     } finally {
