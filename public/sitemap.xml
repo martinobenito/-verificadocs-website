@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Homepage (Máxima prioridad) -->
+  <url>
+    <loc>https://www.verificadocs.com/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Servicios (Alta prioridad) -->
+  <url>
+    <loc>https://www.verificadocs.com/servicios.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Producciones (Alta prioridad - Nueva página) -->
+  <url>
+    <loc>https://www.verificadocs.com/producciones.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sobre VerificaDocs (Alta prioridad) -->
+  <url>
+    <loc>https://www.verificadocs.com/sobre.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Radar Editorial (Prioridad media - Se actualiza cada 15 días) -->
+  <url>
+    <loc>https://www.verificadocs.com/radar.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contacto (Prioridad media-baja) -->
+  <url>
+    <loc>https://www.verificadocs.com/contacto.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
